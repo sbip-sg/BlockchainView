@@ -1,0 +1,17 @@
+{
+    "name": "fabric_view",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=10",
+        "npm": ">=6"
+    },
+    "engineStrict": true,
+    "author": "RPC",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "fabric-ca-client": "^2.2.0",
+        "fabric-network": "^2.2.0",
+        "loglevel": "^1.7.1",
+        "readline-sync": "^1.4.10"
+    }
+}

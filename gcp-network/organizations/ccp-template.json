@@ -1,0 +1,34 @@
+{
+    "name": "test-network-org${ORG}",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Org${ORG}",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Org${ORG}": {
+            "mspid": "${ORG_MSP}",
+            "peers": [
+                "${PEER_DOMAIN}"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.org${ORG}.example.com": {
+            "url": "grpcs://${PEER_DOMAIN}:7051",
+            "tlsCACerts": {
+                "pem": "${PEER_PEM}"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "${PEER_DOMAIN}",
+                "hostnameOverride": "${PEER_DOMAIN}"
+            }
+        }
+    }
+}
